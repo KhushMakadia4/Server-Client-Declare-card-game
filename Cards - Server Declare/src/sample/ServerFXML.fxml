@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="727.0" prefWidth="850.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DeclareGUI">
+    <children>
+        <GridPane fx:id="gPaneServer" alignment="CENTER" gridLinesVisible="true" layoutX="103.0" layoutY="564.0" prefHeight="86.0" prefWidth="616.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="75.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="imgS0" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS1" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS2" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS3" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS4" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS5" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS6" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS7" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS8" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+                <ImageView fx:id="imgS9" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#putDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" GridPane.rowIndex="0" />
+            </children>
+        </GridPane>
+        <Label layoutX="110.0" layoutY="542.0" prefHeight="17.0" prefWidth="109.0" text="You" />
+        <Label layoutX="27.0" layoutY="564.0" prefHeight="62.0" prefWidth="68.0" text="Your hand: " />
+        <Button fx:id="discardBtn" disable="true" layoutX="353.0" layoutY="404.0" mnemonicParsing="false" onAction="#discard" prefHeight="25.0" prefWidth="117.0" text="↓ Discard ↓">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="15.0" />
+         </font></Button>
+
+        <Label layoutX="10.0" layoutY="170.0" prefHeight="62.0" prefWidth="89.0" text="Enemy Discard pile: " wrapText="true" />
+
+        <TableView fx:id="roundInfoTbl" layoutX="684.0" layoutY="249.0" prefHeight="200.0" prefWidth="149.0">
+            <columns>
+                <TableColumn fx:id="clientCol" prefWidth="75.0" text="Client" />
+                <TableColumn fx:id="serverCol" prefWidth="75.0" text="You" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="useTrump" layoutX="563.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" text="Use Trump Card" visible="false" />
+
+      <GridPane fx:id="gPaneClientDiscard" alignment="CENTER" gridLinesVisible="true" layoutX="103.0" layoutY="155.0" prefHeight="92.0" prefWidth="616.0">
+         <children>
+            <ImageView fx:id="imgC0D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" />
+            <ImageView fx:id="imgC1D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="imgC2D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="imgC3D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fx:id="imgC4D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <ImageView fx:id="imgC5D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+            <ImageView fx:id="imgC6D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+            <ImageView fx:id="imgC7D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
+            <ImageView fx:id="imgC8D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8" />
+            <ImageView fx:id="imgC9D" disable="true" fitHeight="75.0" fitWidth="60.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#getClientDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="9" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="75.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+
+      <Button fx:id="declareBtn" disable="true" layoutX="532.0" layoutY="469.0" mnemonicParsing="false" onAction="#declare" prefHeight="25.0" prefWidth="117.0" text="DECLARE!">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="19.0" />
+         </font></Button>
+        <ImageView fx:id="imgDiscDrop" disable="true" fitHeight="75.0" fitWidth="60.0" layoutX="381.0" layoutY="444.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#undoDiscHand" pickOnBounds="true" smooth="false" />
+        <ImageView fx:id="deckPickUp" disable="true" fitHeight="75.0" fitWidth="60.0" layoutX="199.0" layoutY="444.0" onMouseDragged="#dragDetected" onMousePressed="#pressDetect" onMouseReleased="#deckPickup" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="turnInstLbl" layoutX="25.0" layoutY="442.0" prefHeight="62.0" prefWidth="149.0" text="Waiting for the client" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Label>
+        <Label layoutX="190.0" layoutY="417.0" prefHeight="24.0" prefWidth="78.0" text="↓ Deck ↓">
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="45.0" layoutY="420.0" prefHeight="19.0" prefWidth="109.0" text="↓ Instructions ↓">
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="declareLbl" layoutX="27.0" layoutY="286.0" prefHeight="92.0" prefWidth="499.0">
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="27.0" />
+            </font>
+        </Label>
+        <Button fx:id="playAgainBtn" layoutX="553.0" layoutY="312.0" mnemonicParsing="false" onAction="#serverReady" prefHeight="25.0" prefWidth="117.0" text="PLAY AGAIN" visible="false">
+            <font>
+                <Font name="Comic Sans MS Bold Italic" size="13.0" />
+            </font>
+        </Button>
+        <AnchorPane fx:id="startPane" prefHeight="736.0" prefWidth="850.0" style="-fx-background-color: skyblue;">
+            <children>
+                <Label layoutX="193.0" layoutY="155.0" prefHeight="118.0" prefWidth="464.0" text="DECLARE!">
+                    <font>
+                        <Font name="Comic Sans MS Bold Italic" size="96.0" />
+                    </font>
+                </Label>
+                <Button fx:id="connectButton" layoutX="351.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleConnectButton" prefHeight="50.0" prefWidth="126.0" text="CONNECT">
+                    <font>
+                        <Font name="Comic Sans MS Bold Italic" size="18.0" />
+                    </font>
+                </Button>
+                <Label layoutX="351.0" layoutY="87.0" prefHeight="75.0" prefWidth="149.0" text="SERVER">
+                    <font>
+                        <Font name="Comic Sans MS Bold Italic" size="37.0" />
+                    </font>
+                </Label>
+                <Button fx:id="readyButton" disable="true" layoutX="347.0" layoutY="419.0" mnemonicParsing="false" onAction="#serverReady" prefHeight="50.0" prefWidth="134.0" text="I'M READY!">
+                    <font>
+                        <Font name="Comic Sans MS Bold Italic" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>
